@@ -1,0 +1,10 @@
+{
+  "final_model_name": "kmeans",
+  "final_params": {
+    "k": 3
+  },
+  "feature_space": "X_struct_pca",
+  "n_samples": 10000,
+  "n_features": 6,
+  "note": "Artifacts saved from Colab runtime. Re-run Step 4.3 and Step 4.9 after kernel restart."
+}
