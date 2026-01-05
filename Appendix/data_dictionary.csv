@@ -1,0 +1,16 @@
+variable,type,missing_rate_pct,description,unit_or_range,allowed_values
+question_id,int64,0.0,"Unique identifier of the knowledge article, derived from the Stack Exchange question ID. Used as the primary key for article-level analysis.",4 to 485039,Numeric
+accepted_answer_id,float64,0.0,"Identifier of the accepted answer linked to the question, representing the authoritative solution used as the main knowledge content.",7.0 to 485062.0,Numeric
+title,object,0.0,"Short, user-facing title of the knowledge article. Serves as the primary intent signal for retrieval and AI-based intent matching.",N/A,Example: What SPN do I need to set for a net.tcp service?
+question_body,object,0.0,"Contextual description of the problem or scenario provided by the user. Used to assess clarity, completeness, and background sufficiency.",N/A,Example: <p>I have a wcf application hosted in a windows service running a local windows ...
+answer_body,object,0.0,"Main instructional content of the knowledge article. Evaluated for structure, chunkability, clarity, and AI-readiness.",N/A,Example: <p>By default (i.e. out of the box) net.tcp services are unsecured and don't per...
+tags,object,0.0,"Topic labels assigned to the article, representing a lightweight taxonomy or categorization scheme.",N/A,Example: |wcf|security|spn|
+question_score,int64,0.0,"Community-assigned relevance score for the question, used as a proxy for usefulness and clarity of the problem statement.",-9 to 13809,Numeric
+answer_score,int64,0.0,"Community-assigned usefulness score for the accepted answer, used as a proxy for content quality and effectiveness.",-14 to 18566,Numeric
+view_count,Int64,0.0,"Number of times the article has been viewed, serving as a proxy for demand and visibility.",55 to 6316987,Numeric
+question_created_at,datetime64[ns],0.0,Timestamp indicating when the knowledge article was first created. Used for lifecycle and aging analysis.,N/A,Example: 2008-09-02 03:41:06.880
+question_last_activity_at,datetime64[ns],0.0,"Timestamp of the most recent activity on the question, indicating updates or continued relevance.",N/A,Example: 2013-06-24 17:03:55.833
+answer_created_at,datetime64[ns],0.0,Timestamp indicating when the accepted solution was authored.,N/A,Example: 2008-09-02 20:12:02.473
+answer_last_activity_at,datetime64[ns],0.0,"Timestamp of the last update to the accepted answer, useful for freshness assessment.",N/A,Example: 2008-09-02 20:12:02.473
+answer_length,int64,0.0,Character length of the answer body. Used as a proxy for chunkability and structural suitability for AI retrieval.,200 to 23918,Numeric
+question_length,int64,0.0,Character length of the question body. Used to assess context density and potential ambiguity.,21 to 28158,Numeric
